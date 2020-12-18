@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Aero Matics Regular';
+  /* TODO: Inline this or use a CDN. */
+  src: url('assets/aero-matics-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Aero Matics Display Regular';
+  /* TODO: Inline this or use a CDN. */
+  src: url('assets/aero-matics-display-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Aero Matics Light';
+  /* TODO: Inline this or use a CDN. */
+  src: url('assets/aero-matics-light.woff') format('woff');
+}
+
+.unit-card {
+  background: #ccc;
+  font-family: 'Aero Matics Regular';
+}
+
+.unit-card strong {
+  font-family: 'Aero Matics Display Regular';
+}
+
+.unit-card em {
+  font-family: 'Aero Matics Light';
+  font-size: x-small;
+  font-style: normal;
+  text-transform: uppercase;
+}

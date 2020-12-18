@@ -1,5 +1,13 @@
 {
-  "cSpell.words": ["Sider", "antd", "browserslist", "esnext", "prando"],
+  "cSpell.words": [
+    "Matics",
+    "Sider",
+    "Sith",
+    "antd",
+    "browserslist",
+    "esnext",
+    "prando"
+  ],
   // Formatting.
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
