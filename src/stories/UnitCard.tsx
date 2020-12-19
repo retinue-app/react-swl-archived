@@ -57,6 +57,23 @@ function upgradeToIcon(upgrade: Upgrade): string {
   }[upgrade];
 }
 
+interface Keyword {
+  name?: string;
+  description?: string;
+  hint?: string;
+}
+
+interface Weapon {
+  name: string;
+  range: number[];
+  keywords: string[];
+  dice: {
+    red?: number;
+    black?: number;
+    white?: number;
+  };
+}
+
 export interface UnitCardProps {
   name: string;
   faction: string;
@@ -68,7 +85,57 @@ export interface UnitCardProps {
   subTitle: string;
   miniatures: number;
   upgrades: Upgrade[];
+  keywords: Keyword[];
+  weapons: Weapon[];
 }
+
+const RenderHintText: React.FC<{ text: string }> = (props) => {
+  let output = props.text.replace(/[^{}]+(?=})/g, (match) => {
+    let icon = '';
+    switch (match) {
+      case 'DEFENSIVE_SURGE':
+        icon = 'd';
+        break;
+      case 'BLOCK':
+        icon = 'b';
+        break;
+      case 'UPGRADE_FORCE':
+        icon = 'F';
+        break;
+    }
+    if (icon) {
+      return `<span>${icon}</span>`;
+    } else {
+      return match;
+    }
+  });
+  output = output.replace(/{|}/g, '');
+  return <em dangerouslySetInnerHTML={{ __html: output }}></em>;
+};
+
+const RenderDice: React.FC<{
+  red?: number;
+  black?: number;
+  white?: number;
+}> = (props) => {
+  const out: string[] = [];
+  for (let i = 0; i < (props.red || 0); i++) {
+    out.push('red');
+  }
+  for (let i = 0; i < (props.black || 0); i++) {
+    out.push('black');
+  }
+  for (let i = 0; i < (props.white || 0); i++) {
+    out.push('white');
+  }
+  return (
+    <>
+      {out.map((color, i) => {
+        return <span className={`dice ${color}`} key={i} />;
+      })}
+    </>
+  );
+};
 
 export const UnitCard: React.FC<UnitCardProps> = (props) => {
   return (
@@ -145,8 +212,44 @@ export const UnitCard: React.FC<UnitCardProps> = (props) => {
           <div className="minis">{props.miniatures}</div>
         </div>
       </header>
-      <main></main>
-      <footer></footer>
+      <main>
+        <ul>
+          {props.keywords.map((v, i) => {
+            return (
+              <li key={i}>
+                {v.name && <strong>{v.name}</strong>}
+                {v.hint && <RenderHintText text={v.hint} />}
+              </li>
+            );
+          })}
+        </ul>
+      </main>
+      <footer>
+        <ul>
+          {props.weapons.map((v, i) => {
+            return (
+              <li key={i}>
+                <strong>{v.name}</strong>
+                <figure>
+                  <span className="melee" />
+                  <RenderDice
+                    red={v.dice.red}
+                    black={v.dice.black}
+                    white={v.dice.white}
+                  />
+                </figure>
+                <section>
+                  <ul>
+                    {v.keywords.map((k, i) => {
+                      return <li key={i}>{k}</li>;
+                    })}
+                  </ul>
+                </section>
+              </li>
+            );
+          })}
+        </ul>
+      </footer>
     </div>
   );
 };
