@@ -17,9 +17,9 @@ export default {
   },
 } as Meta;
 
-export const Primary = (args: UnitCardProps) => <UnitCard {...args} />;
+export const DarthVader = (args: UnitCardProps) => <UnitCard {...args} />;
 
-Primary.args = (() => {
+DarthVader.args = (() => {
   const args: UnitCardProps = {
     name: 'Darth Vader',
     faction: 'Galactic Empire',

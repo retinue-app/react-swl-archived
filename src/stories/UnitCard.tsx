@@ -75,7 +75,13 @@ export const UnitCard: React.FC<UnitCardProps> = (props) => {
     <div className="unit-card">
       <aside className="stats">
         <div className="image-and-type">
-          <img alt="Darth Vader" src={props.image} />
+          {props.image ? (
+            <img className="art" alt={props.name} src={props.image} />
+          ) : (
+            <div className="art placeholder" aria-label={props.name}>
+              {props.name}
+            </div>
+          )}
           <div className="type">Trooper</div>
         </div>
         <div className="defensive">

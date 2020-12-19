@@ -99,16 +99,27 @@ $cardHeight: 300px;
       height: 95px;
       background: #333;
 
-      & > img {
+      & > .art {
         height: 80px;
         width: 100%;
         background: #aaa;
         border-image-width: 0;
         border-radius: 0px $borderRadiusSize 0px 0px;
+
+        &.placeholder {
+          background: #222;
+          color: #aaa;
+          font-family: 'Aero Matics Display Regular';
+          font-size: x-small;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
 
       & > .type {
         color: $darkBgTextColor;
+        line-height: 15px;
         font-family: 'Aero Matics Light';
         font-size: xx-small;
         text-align: center;
