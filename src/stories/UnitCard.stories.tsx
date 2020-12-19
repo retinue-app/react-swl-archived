@@ -28,7 +28,10 @@ DarthVader.args = (() => {
     unique: true,
     subTitle: 'Dark Lord of the Sith',
     rank: 'Commander',
+    type: 'Trooper',
     miniatures: 1,
+    defense: 'Red',
+    points: 200,
     image: 'vader-preview.png',
     wounds: 8,
     courage: '-',
@@ -85,7 +88,10 @@ LukeSkywalker.args = (() => {
     unique: true,
     subTitle: 'Hero of the Rebellion',
     rank: 'Commander',
+    type: 'Trooper',
+    points: 160,
     miniatures: 1,
+    defense: 'Red',
     wounds: 6,
     courage: 3,
     surgeAttack: 'Crit',
@@ -133,6 +139,138 @@ LukeSkywalker.args = (() => {
         range: [1, 2],
         dice: { red: 2 },
         keywords: ['Pierce 2'],
+      },
+    ],
+  };
+  return args;
+})();
+
+export const R2D2 = (args: UnitCardProps) => <UnitCard {...args} />;
+
+R2D2.args = (() => {
+  const args: UnitCardProps = {
+    name: 'R2-D2',
+    faction: 'Galactic Republic',
+    logo: 'logos/republic.svg',
+    theme: '#b49e77',
+    unique: true,
+    subTitle: 'Independent Astromech',
+    rank: 'Operative',
+    type: 'Droid Trooper',
+    points: 35,
+    miniatures: 1,
+    wounds: 4,
+    courage: 2,
+    defense: 'White',
+    surgeAttack: 'Hit',
+    surgeDefense: true,
+    speed: 1,
+    image: 'r2-preview.png',
+    upgrades: ['Comms'],
+    keywords: [
+      {
+        type: 'action',
+        name: 'Repair 2: Capacity 2',
+      },
+      {
+        type: 'free',
+        name: 'Secret Mission',
+        hint:
+          'Once per game, if you are within an enemy deployment zone, place ' +
+          '1 victory token on you. At the end of the game, if you have a ' +
+          'victory token, gain that token.',
+      },
+      {
+        name: 'Grounded',
+        hint: 'You cannot climb or clamber.',
+      },
+      {
+        name: 'Inconspicuous',
+        hint:
+          'When an enemy unit performs an attack, if you have at least 1 ' +
+          'suppression token, it must attack another unit, if able. During ' +
+          'your Rally step, you may choose not to remove your suppression ' +
+          'tokens.',
+      },
+    ],
+    weapons: [
+      {
+        name: 'Electro-Shock',
+        range: [0, 1],
+        dice: { white: 3 },
+        keywords: ['Suppressive'],
+      },
+    ],
+  };
+  return args;
+})();
+
+export const AATTradeFederationBattleTank = (args: UnitCardProps) => (
+  <UnitCard {...args} />
+);
+
+AATTradeFederationBattleTank.args = (() => {
+  const args: UnitCardProps = {
+    name: 'AAT Trade Federation Battle Tank',
+    faction: 'Separatist Alliance',
+    logo: 'logos/republic.svg',
+    theme: '#354895',
+    unique: false,
+    subTitle: '',
+    rank: 'Heavy',
+    type: 'Repulsor Vehicle',
+    points: 170,
+    miniatures: 1,
+    wounds: 9,
+    resilience: 6,
+    defense: 'Red',
+    surgeAttack: 'None',
+    surgeDefense: false,
+    speed: 1,
+    image: 'aat-preview.png',
+    upgrades: ['Pilot', 'Ordinance', 'Ordinance', 'Comms'],
+    keywords: [
+      {
+        name: 'AI: Attack',
+        hint:
+          'Unless you have a faceup order token, your first action must ' +
+          'be an attack, if able.',
+      },
+      {
+        name: 'Armor',
+        hint: 'While defending, cancel all {HIT} results.',
+      },
+      {
+        name: 'Arsenal 2',
+      },
+      {
+        name: 'Barrage',
+        hint:
+          'If you do not use *ARSENAL* during your activation, you can ' +
+          'perform up to 2 attack actions.',
+      },
+      {
+        name: 'Hover: Ground',
+        hint:
+          'You can reverse, strafe, and standby. You are treated as a ' +
+          'ground vehicle by other units.',
+      },
+      {
+        name: 'Weak Point 2: Rear',
+      },
+    ],
+    weapons: [
+      {
+        name: 'Lateral Anti-Personnel Lasers',
+        range: [1, 2],
+        dice: { black: 3 },
+        keywords: ['Fixed: Front'],
+      },
+      {
+        name: 'MX-8 Artillery Laser Cannon',
+        range: [2, 4],
+        dice: { red: 4 },
+        keywords: ['Critical 2', 'High Velocity', 'Impact 1'],
       },
     ],
   };

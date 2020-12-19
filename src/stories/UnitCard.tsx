@@ -47,7 +47,8 @@ function upgradeToIcon(upgrade: Upgrade): string {
     Crew: 'A',
     Training: 'M',
     Hardpoint: 'H',
-    Ordinance: 'O',
+    // TODO: Fix the legion font to support Ordinance.
+    Ordinance: 'B',
     Illicit: 'I',
     Comms: 'O',
     Generator: 'G',
@@ -95,12 +96,15 @@ export interface UnitCardProps {
   logo: string;
   image?: string;
   rank: Rank;
+  type: string;
   unique: boolean;
   subTitle: string;
   miniatures: number;
+  points: number;
   wounds: number;
   courage?: number | '-';
   resilience?: number | '-';
+  defense: 'Red' | 'White';
   surgeAttack: 'None' | 'Hit' | 'Crit';
   surgeDefense: boolean;
   speed: number;
@@ -122,6 +126,9 @@ const RenderHintText: React.FC<{ text: string }> = (props) => {
       case 'UPGRADE_FORCE':
         icon = 'F';
         break;
+      case 'HIT':
+        icon = 'h';
+        break;
     }
     if (icon) {
       return `<span>${icon}</span>`;
@@ -129,7 +136,10 @@ const RenderHintText: React.FC<{ text: string }> = (props) => {
       return match;
     }
   });
-  output = output.replace(/{|}/g, '');
+  output = output.replace(/\*(.*?)\*/g, (match) => {
+    return `<strong>${match}</strong>`;
+  });
+  output = output.replace(/{|}|\*/g, '');
   return <em dangerouslySetInnerHTML={{ __html: output }}></em>;
 };
 
@@ -185,18 +195,18 @@ export const UnitCard: React.FC<UnitCardProps> = (props) => {
               {props.name}
             </div>
           )}
-          <div className="type">Trooper</div>
+          <div className="type">{props.type}</div>
         </div>
         <div className="defensive">
-          <div className="dice red">
+          <div className={`dice ${props.defense.toLowerCase()}`}>
             <span className="icon">E</span>
           </div>
           <div className="health">
             <div className="wounds">
               <span className="icon">L</span> {props.wounds}
             </div>
-            <div className="mitigation">
-              <span className="icon">m</span>{' '}
+            <div className={`mitigation ${props.resilience && 'resilience'}`}>
+              <span className="icon">{props.resilience ? 'V' : 'm'}</span>{' '}
               {props.courage || props.resilience}
             </div>
           </div>
@@ -234,7 +244,7 @@ export const UnitCard: React.FC<UnitCardProps> = (props) => {
             data={props.logo}
           />
         </div>
-        <div className="points">200</div>
+        <div className="points">{props.points}</div>
         <ul className="slots">
           {props.upgrades.map((u, i) => {
             return <li key={i}>{upgradeToIcon(u)}</li>;
