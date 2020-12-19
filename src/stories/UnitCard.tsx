@@ -57,7 +57,21 @@ function upgradeToIcon(upgrade: Upgrade): string {
   }[upgrade];
 }
 
+function rangeToIcon(range: number): string {
+  const mapping: { [key: string]: string } = {
+    0: 'melee',
+    1: 'range-1',
+    2: 'range-2',
+    3: 'range-3',
+    4: 'range-4',
+    5: 'range-5',
+    6: 'infinite',
+  };
+  return mapping[range] || '';
+}
+
 interface Keyword {
+  type?: 'action' | 'free';
   name?: string;
   description?: string;
   hint?: string;
@@ -84,6 +98,12 @@ export interface UnitCardProps {
   unique: boolean;
   subTitle: string;
   miniatures: number;
+  wounds: number;
+  courage?: number | '-';
+  resilience?: number | '-';
+  surgeAttack: 'None' | 'Hit' | 'Crit';
+  surgeDefense: boolean;
+  speed: number;
   upgrades: Upgrade[];
   keywords: Keyword[];
   weapons: Weapon[];
@@ -113,6 +133,17 @@ const RenderHintText: React.FC<{ text: string }> = (props) => {
   return <em dangerouslySetInnerHTML={{ __html: output }}></em>;
 };
 
+const RenderRange: React.FC<{ range: number[] }> = (props) => {
+  return (
+    <>
+      {props.range.map((v, i) => {
+        const output = rangeToIcon(v);
+        return <span className={output} key={i} />;
+      })}
+    </>
+  );
+};
+
 const RenderDice: React.FC<{
   red?: number;
   black?: number;
@@ -131,7 +162,12 @@ const RenderDice: React.FC<{
   return (
     <>
       {out.map((color, i) => {
-        return <span className={`dice ${color}`} key={i} />;
+        return (
+          <span
+            className={`dice ${color} ${i % 2 === 0 ? 'even' : 'odd'}`}
+            key={i}
+          />
+        );
       })}
     </>
   );
@@ -157,24 +193,36 @@ export const UnitCard: React.FC<UnitCardProps> = (props) => {
           </div>
           <div className="health">
             <div className="wounds">
-              <span className="icon">L</span> 8
+              <span className="icon">L</span> {props.wounds}
             </div>
             <div className="mitigation">
-              <span className="icon">m</span> -
+              <span className="icon">m</span>{' '}
+              {props.courage || props.resilience}
             </div>
           </div>
           <div className="surges">
-            <div>
-              <span className="icon">o</span>:<span className="icon">c</span>
+            <div
+              style={{
+                visibility: props.surgeAttack === 'None' ? 'hidden' : 'visible',
+              }}
+            >
+              <span className="icon">o</span>:
+              <span className="icon">
+                {props.surgeAttack === 'Crit' ? 'c' : 'h'}
+              </span>
             </div>
-            <div>
+            <div
+              style={{
+                visibility: props.surgeDefense === false ? 'hidden' : 'visible',
+              }}
+            >
               <span className="icon">d</span>:<span className="icon">s</span>
             </div>
           </div>
           <div className="speed">
-            <div className={`bar lit`} />
-            <div className="bar" />
-            <div className="bar" />
+            <div className={`bar ${props.speed >= 1 && 'lit'}`} />
+            <div className={`bar ${props.speed >= 2 && 'lit'}`} />
+            <div className={`bar ${props.speed >= 3 && 'lit'}`} />
           </div>
         </div>
       </aside>
@@ -217,6 +265,8 @@ export const UnitCard: React.FC<UnitCardProps> = (props) => {
           {props.keywords.map((v, i) => {
             return (
               <li key={i}>
+                {v.type === 'free' && <span>y</span>}
+                {v.type === 'action' && <span>x</span>}
                 {v.name && <strong>{v.name}</strong>}
                 {v.hint && <RenderHintText text={v.hint} />}
               </li>
@@ -231,7 +281,7 @@ export const UnitCard: React.FC<UnitCardProps> = (props) => {
               <li key={i}>
                 <strong>{v.name}</strong>
                 <figure>
-                  <span className="melee" />
+                  <RenderRange range={v.range} />
                   <RenderDice
                     red={v.dice.red}
                     black={v.dice.black}

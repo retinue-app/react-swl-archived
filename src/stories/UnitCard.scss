@@ -350,10 +350,43 @@ $cardHeight: 300px;
             font-family: 'Legion Icons';
             font-size: larger;
 
+            &::before {
+              color: #417b9c;
+            }
+
             &.melee {
               &::before {
                 content: 'a';
-                color: #90181e;
+              }
+            }
+
+            &.range-1 {
+              &::before {
+                content: '1';
+              }
+            }
+
+            &.range-2 {
+              &::before {
+                content: '2';
+              }
+            }
+
+            &.range-3 {
+              &::before {
+                content: '3';
+              }
+            }
+
+            &.range-4 {
+              &::before {
+                content: '4';
+              }
+            }
+
+            &.range-6 {
+              &::before {
+                content: '0';
               }
             }
 
@@ -369,13 +402,23 @@ $cardHeight: 300px;
               transform: rotateX(15deg) rotateZ(45deg);
               margin-top: -8px;
 
-              &:nth-child(odd) {
+              &.odd {
                 margin-top: 6px;
               }
 
               &.red {
                 background: #90181e;
                 border: 1px solid #fff;
+              }
+
+              &.black {
+                background: #000;
+                border: 1px solid #fff;
+              }
+
+              &.white {
+                background: #fff;
+                border: 1px solid #000;
               }
             }
           }
