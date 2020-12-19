@@ -62,7 +62,7 @@ export interface UnitCardProps {
   faction: string;
   theme: string;
   logo: string;
-  image: string;
+  image?: string;
   rank: Rank;
   unique: boolean;
   subTitle: string;
