@@ -1,5 +1,5 @@
 import React from 'react';
-import './UnitCard.css';
+import './UnitCard.scss';
 
 type Rank =
   | 'Commander'
