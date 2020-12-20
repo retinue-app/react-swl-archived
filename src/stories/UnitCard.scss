@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: 'Legion Icons';
-  src: url('assets/legion-icons.woff') format('woff');
+  src: url('assets/legion-icons-3.0.woff2') format('woff2');
 }
 
 @font-face {
@@ -383,6 +383,12 @@ $cardHeight: 300px;
             &.range-4 {
               &::before {
                 content: '4';
+              }
+            }
+
+            &.range-5 {
+              &::before {
+                content: 'R';
               }
             }
 

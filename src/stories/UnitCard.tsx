@@ -47,8 +47,7 @@ function upgradeToIcon(upgrade: Upgrade): string {
     Crew: 'A',
     Training: 'M',
     Hardpoint: 'H',
-    // TODO: Fix the legion font to support Ordinance.
-    Ordinance: 'B',
+    Ordinance: 'J',
     Illicit: 'I',
     Comms: 'O',
     Generator: 'G',

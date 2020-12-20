@@ -147,6 +147,8 @@ LukeSkywalker.args = (() => {
 
 export const R2D2 = (args: UnitCardProps) => <UnitCard {...args} />;
 
+R2D2.storyName = 'R2-D2';
+
 R2D2.args = (() => {
   const args: UnitCardProps = {
     name: 'R2-D2',
@@ -205,15 +207,13 @@ R2D2.args = (() => {
   return args;
 })();
 
-export const AATTradeFederationBattleTank = (args: UnitCardProps) => (
-  <UnitCard {...args} />
-);
+export const AAT = (args: UnitCardProps) => <UnitCard {...args} />;
 
-AATTradeFederationBattleTank.args = (() => {
+AAT.args = (() => {
   const args: UnitCardProps = {
     name: 'AAT Trade Federation Battle Tank',
     faction: 'Separatist Alliance',
-    logo: 'logos/republic.svg',
+    logo: 'logos/separatist.svg',
     theme: '#354895',
     unique: false,
     subTitle: '',
