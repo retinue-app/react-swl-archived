@@ -1,0 +1,24 @@
+$backColor: #1c1e1d;
+$darkColor: #3f1d1e;
+$lightColor: #e54281;
+
+.speed-display {
+  display: flex;
+  height: 15px;
+  margin: 0;
+  padding: 0;
+  background-color: $backColor;
+
+  > span {
+    flex: 1;
+    background: $darkColor;
+    border: 1px solid darken($darkColor, 15);
+    border-radius: 2px;
+    margin: 4px 2px;
+
+    &.active {
+      background-color: $lightColor;
+      border: 1px solid lighten($lightColor, 15);
+    }
+  }
+}

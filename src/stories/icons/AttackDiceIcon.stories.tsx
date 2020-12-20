@@ -4,6 +4,13 @@ import { AttackDiceIcon, AttackDiceIconProps } from './AttackDiceIcon';
 export default {
   title: 'Icons/Attack Dice',
   component: AttackDiceIcon,
+  argTypes: {
+    color: {
+      control: {
+        type: 'select',
+      },
+    },
+  },
 } as Meta;
 
 export const Red = (args: AttackDiceIconProps) => <AttackDiceIcon {...args} />;
