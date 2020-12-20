@@ -22,6 +22,10 @@
 
       &::after {
         content: '-';
+        display: inline-block;
+        font-weight: bolder;
+        font-size: x-large;
+        padding: 2px;
       }
 
       &.melee {
