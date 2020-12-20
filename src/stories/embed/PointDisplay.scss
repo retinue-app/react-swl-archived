@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Aero Matics Regular';
+  src: url('../assets/aero-matics-regular.woff') format('woff');
+}
+
+.point-display {
+  background: #dfeff0;
+  border: 1px solid #307776;
+  height: 15px;
+  text-align: center;
+  font-family: 'Aero Matics Regular';
+  font-size: small;
+}
