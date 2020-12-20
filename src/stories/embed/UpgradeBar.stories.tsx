@@ -7,6 +7,7 @@ export default {
 } as Meta;
 
 export const Example = (args: UpgradeBarProps) => <UpgradeBar {...args} />;
+
 Example.args = {
   heavyWeapon: 1,
   personnel: 1,

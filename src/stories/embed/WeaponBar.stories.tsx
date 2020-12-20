@@ -23,8 +23,9 @@ Example2.storyName = 'Composing a Weapon Bar';
 Example2.args = (() => {
   const args: WeaponBarProps = {
     children: [
-      <Weapon name="Boot Spikes" red={2} melee={true} />,
+      <Weapon key={0} name="Boot Spikes" red={2} melee={true} />,
       <Weapon
+        key={1}
         name="Wrist Rocket"
         black={2}
         minRange={1}
@@ -32,6 +33,7 @@ Example2.args = (() => {
         keywords={['Impact 1']}
       />,
       <Weapon
+        key={2}
         name="Fett's EE-3 Carbine"
         black={2}
         minRange={1}
