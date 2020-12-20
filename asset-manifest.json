@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "./static/css/main.eea89c55.chunk.css",
-    "main.js": "./main.c3246c141c8f4833e366.bundle.js",
-    "main.css.map": "./static/css/main.eea89c55.chunk.css.map",
-    "main.js.map": "./main.c3246c141c8f4833e366.bundle.js.map",
-    "runtime~main.js": "./runtime~main.c3246c141c8f4833e366.bundle.js",
-    "runtime~main.js.map": "./runtime~main.c3246c141c8f4833e366.bundle.js.map",
-    "vendors~main.js": "./vendors~main.c3246c141c8f4833e366.bundle.js",
-    "vendors~main.js.map": "./vendors~main.c3246c141c8f4833e366.bundle.js.map",
+    "main.css": "./static/css/main.d7bedb49.chunk.css",
+    "main.js": "./main.79fbd2b16a23b5c44c82.bundle.js",
+    "main.css.map": "./static/css/main.d7bedb49.chunk.css.map",
+    "main.js.map": "./main.79fbd2b16a23b5c44c82.bundle.js.map",
+    "runtime~main.js": "./runtime~main.79fbd2b16a23b5c44c82.bundle.js",
+    "runtime~main.js.map": "./runtime~main.79fbd2b16a23b5c44c82.bundle.js.map",
+    "vendors~main.js": "./vendors~main.79fbd2b16a23b5c44c82.bundle.js",
+    "vendors~main.js.map": "./vendors~main.79fbd2b16a23b5c44c82.bundle.js.map",
     "iframe.html": "./iframe.html",
+    "static/media/WeaponPool.scss": "./static/media/aero-matics-display-regular.d3e2350d.woff",
     "static/media/UnitCard.scss": "./static/media/minion-pro-italic.c9200037.woff",
     "static/media/UpgradeIcon.scss": "./static/media/legion-icons-3.0.b0ce1de1.woff2",
-    "vendors~main.c3246c141c8f4833e366.bundle.js.LICENSE.txt": "./vendors~main.c3246c141c8f4833e366.bundle.js.LICENSE.txt"
+    "vendors~main.79fbd2b16a23b5c44c82.bundle.js.LICENSE.txt": "./vendors~main.79fbd2b16a23b5c44c82.bundle.js.LICENSE.txt"
   },
   "entrypoints": [
-    "runtime~main.c3246c141c8f4833e366.bundle.js",
-    "vendors~main.c3246c141c8f4833e366.bundle.js",
-    "static/css/main.eea89c55.chunk.css",
-    "main.c3246c141c8f4833e366.bundle.js"
+    "runtime~main.79fbd2b16a23b5c44c82.bundle.js",
+    "vendors~main.79fbd2b16a23b5c44c82.bundle.js",
+    "static/css/main.d7bedb49.chunk.css",
+    "main.79fbd2b16a23b5c44c82.bundle.js"
   ]
 }
