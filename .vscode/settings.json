@@ -13,6 +13,7 @@
     "antd",
     "browserslist",
     "esnext",
+    "peaceiris",
     "prando"
   ],
   // Formatting.
