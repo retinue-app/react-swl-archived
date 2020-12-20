@@ -53,10 +53,11 @@ $cardHeight: 300px;
       text-align: center;
 
       & > .rank {
-        font-family: 'Legion Icons';
-        font-size: larger;
         padding: 5px;
-        text-shadow: 0px 1px #000;
+
+        > .unit-rank-icon {
+          font-size: larger;
+        }
       }
 
       & > .minis {

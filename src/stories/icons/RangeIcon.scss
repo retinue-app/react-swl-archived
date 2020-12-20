@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'Legion Icons';
+  src: url('../assets/legion-icons-3.0.woff2') format('woff2');
+}
+
+span.range-icon {
+  font-family: 'Legion Icons';
+
+  &[data-range='Melee'] {
+    &::before {
+      content: 'a';
+    }
+  }
+
+  &[data-range='1'] {
+    &::before {
+      content: '1';
+    }
+  }
+
+  &[data-range='2'] {
+    &::before {
+      content: '2';
+    }
+  }
+
+  &[data-range='3'] {
+    &::before {
+      content: '3';
+    }
+  }
+
+  &[data-range='4'] {
+    &::before {
+      content: '4';
+    }
+  }
+
+  &[data-range='5'] {
+    &::before {
+      content: 'R';
+    }
+  }
+
+  &[data-range='Infinite'] {
+    &::before {
+      content: '0';
+    }
+  }
+}

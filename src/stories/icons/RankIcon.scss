@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Legion Icons';
+  src: url('../assets/legion-icons-3.0.woff2') format('woff2');
+}
+
+span.unit-rank-icon {
+  font-family: 'Legion Icons';
+
+  &[aria-label='Commander'] {
+    &::before {
+      content: '5';
+    }
+  }
+
+  &[aria-label='Operative'] {
+    &::before {
+      content: 'b';
+    }
+  }
+
+  &[aria-label='Corps'] {
+    &::before {
+      content: '6';
+    }
+  }
+
+  &[aria-label='Special Forces'] {
+    &::before {
+      content: '7';
+    }
+  }
+
+  &[aria-label='Support'] {
+    &::before {
+      content: '8';
+    }
+  }
+
+  &[aria-label='Heavy'] {
+    &::before {
+      content: '9';
+    }
+  }
+}

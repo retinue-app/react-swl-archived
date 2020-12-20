@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@retinue/databank": "github:retinue-app/databank#gh-pages",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "typescript": "^4.1.3",

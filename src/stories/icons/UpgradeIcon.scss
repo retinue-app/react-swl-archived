@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'Legion Icons';
+  src: url('../assets/legion-icons-3.0.woff2') format('woff2');
+}
+
+span.upgrade-type-icon {
+  font-family: 'Legion Icons';
+
+  &[aria-label='Heavy Weapon'] {
+    &::before {
+      content: 'W';
+    }
+  }
+
+  &[aria-label='Personnel'] {
+    &::before {
+      content: 'U';
+    }
+  }
+
+  &[aria-label='Force'] {
+    &::before {
+      content: 'F';
+    }
+  }
+
+  &[aria-label='Command'] {
+    &::before {
+      content: 'C';
+    }
+  }
+
+  &[aria-label='Pilot'] {
+    &::before {
+      content: 'P';
+    }
+  }
+
+  &[aria-label='Crew'] {
+    &::before {
+      content: 'A';
+    }
+  }
+
+  &[aria-label='Training'] {
+    &::before {
+      content: 'M';
+    }
+  }
+
+  &[aria-label='Hardpoint'] {
+    &::before {
+      content: 'H';
+    }
+  }
+
+  &[aria-label='Ordinance'] {
+    &::before {
+      content: 'J';
+    }
+  }
+
+  &[aria-label='Comms'] {
+    &::before {
+      content: 'O';
+    }
+  }
+
+  &[aria-label='Generator'] {
+    &::before {
+      content: 'I';
+    }
+  }
+
+  &[aria-label='Gear'] {
+    &::before {
+      content: 'F';
+    }
+  }
+
+  &[aria-label='Armament'] {
+    &::before {
+      content: 'B';
+    }
+  }
+
+  &[aria-label='Grenades'] {
+    &::before {
+      content: 'N';
+    }
+  }
+}

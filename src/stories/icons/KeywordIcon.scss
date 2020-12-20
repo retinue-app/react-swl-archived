@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Legion Icons';
+  src: url('../assets/legion-icons-3.0.woff2') format('woff2');
+}
+
+span.keyword-icon {
+  font-family: 'Legion Icons';
+
+  &[aria-label='Action'] {
+    &::before {
+      content: 'x';
+    }
+  }
+
+  &[aria-label='Free Action'] {
+    &::before {
+      content: 'y';
+    }
+  }
+
+  &[aria-label='Exhaust'] {
+    &::before {
+      content: 'z';
+    }
+  }
+
+  &[aria-label='Health'] {
+    &::before {
+      content: 'L';
+    }
+  }
+
+  &[aria-label='Courage'] {
+    &::before {
+      content: 'm';
+    }
+  }
+
+  &[aria-label='Resilience'] {
+    &::before {
+      content: 'V';
+    }
+  }
+}

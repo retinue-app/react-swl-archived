@@ -1,13 +1,7 @@
+import { UnitRank } from '@retinue/databank';
 import React from 'react';
+import { RankIcon } from './icons/RankIcon';
 import './UnitCard.scss';
-
-type Rank =
-  | 'Commander'
-  | 'Operative'
-  | 'Corps'
-  | 'Special Forces'
-  | 'Support'
-  | 'Heavy';
 
 type Upgrade =
   | 'Heavy Weapon'
@@ -25,17 +19,6 @@ type Upgrade =
   | 'Gear'
   | 'Armament'
   | 'Grenade';
-
-function rankToIcon(rank: Rank): string {
-  return {
-    Commander: '5',
-    Operative: 'b',
-    Corps: '6',
-    'Special Forces': '7',
-    Support: '8',
-    Heavy: '9',
-  }[rank];
-}
 
 function upgradeToIcon(upgrade: Upgrade): string {
   return {
@@ -94,7 +77,7 @@ export interface UnitCardProps {
   theme: string;
   logo: string;
   image?: string;
-  rank: Rank;
+  rank: UnitRank;
   type: string;
   unique: boolean;
   subTitle: string;
@@ -264,7 +247,7 @@ export const UnitCard: React.FC<UnitCardProps> = (props) => {
         </div>
         <div className="rank-and-minis">
           <div className="rank" style={{ backgroundColor: props.theme }}>
-            {rankToIcon(props.rank)}
+            <RankIcon rank={props.rank} />
           </div>
           <div className="minis">{props.miniatures}</div>
         </div>

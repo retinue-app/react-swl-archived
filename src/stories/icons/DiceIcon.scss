@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'Legion Icons';
+  src: url('../assets/legion-icons-3.0.woff2') format('woff2');
+}
+
+span.dice-icon {
+  font-family: 'Legion Icons';
+
+  &[aria-label='White Defense Dice'] {
+    &::before {
+      content: 'D';
+    }
+  }
+
+  &[aria-label='Red Defense Dice'] {
+    &::before {
+      content: 'E';
+    }
+  }
+
+  &[aria-label='Attack Surge'] {
+    &::before {
+      content: 'o';
+    }
+  }
+
+  &[aria-label='Defense Surge'] {
+    &::before {
+      content: 'd';
+    }
+  }
+
+  &[aria-label='Hit'] {
+    &::before {
+      content: 'h';
+    }
+  }
+
+  &[aria-label='Crit'] {
+    &::before {
+      content: 'c';
+    }
+  }
+
+  &[aria-label='Block'] {
+    &::before {
+      content: 's';
+    }
+  }
+}
