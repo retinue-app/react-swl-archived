@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Aero Matics Display Regular';
+  src: url('../assets/aero-matics-display-regular.woff') format('woff');
+}
+
+.weapon {
+  > header {
+    background: #515153;
+    color: #fff;
+    font-family: 'Aero Matics Display Regular';
+    font-weight: normal;
+    font-size: small;
+    letter-spacing: 0.5px;
+    padding: 3px;
+  }
+
+  > main {
+    background: #8c8c8c;
+    padding: 5px;
+  }
+
+  > footer {
+    font-family: 'Aero Matics Display Regular';
+    font-size: small;
+    padding: 5px;
+
+    > ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+
+      > li {
+        display: inline-block;
+
+        &::after {
+          content: ',';
+          padding-right: 5px;
+        }
+
+        &:last-child {
+          &::after {
+            content: '';
+          }
+        }
+      }
+    }
+  }
+}
+
+.weapon-bar {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    border-right: 2px solid #2f2f2f;
+    flex: 1;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}

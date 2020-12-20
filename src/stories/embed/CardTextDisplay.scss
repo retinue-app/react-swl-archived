@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Aero Matics Display Regular';
+  src: url('../assets/aero-matics-display-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Minion Pro';
+  src: url('../assets/minion-pro.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Minion Pro Italic';
+  src: url('../assets/minion-pro-italic.woff') format('woff');
+}
+
+.symbolized-text {
+  font-family: 'Minion Pro';
+
+  strong {
+    font-family: 'Aero Matics Display Regular';
+  }
+
+  &.reminder {
+    font-family: 'Minion Pro Italic';
+
+    .keyword {
+      font-style: italic;
+    }
+  }
+
+  &.keyword {
+    font-family: 'Aero Matics Display Regular';
+  }
+}
+
+.keyword-text {
+  > .reminder {
+    padding-left: 5px;
+
+    ::before {
+      content: '(';
+    }
+
+    ::after {
+      content: ')';
+    }
+  }
+}

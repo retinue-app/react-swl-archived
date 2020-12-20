@@ -4,6 +4,14 @@ import { WeaponPool, WeaponPoolProps } from './WeaponPool';
 export default {
   title: 'Embedded/Weapon Pool',
   component: WeaponPool,
+  argTypes: {
+    melee: {},
+    minRange: {},
+    maxRange: {},
+    red: {},
+    black: {},
+    white: {},
+  },
 } as Meta;
 
 export const E11BlasterRifle = (args: WeaponPoolProps) => (

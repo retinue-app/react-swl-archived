@@ -1,0 +1,30 @@
+$backColor: #282423;
+$borderColor: #2e2723;
+$hiddenColor: #76777b;
+
+.surge-table {
+  background: $backColor;
+  color: #fff;
+
+  > div {
+    display: flex;
+    border: 2px solid $borderColor;
+
+    &.hidden {
+      background: $hiddenColor;
+      border-color: darken($hiddenColor, 15);
+
+      > span {
+        visibility: hidden;
+      }
+    }
+
+    > span {
+      flex: 1;
+      font-size: larger;
+      padding: 5px;
+      text-align: center;
+      text-shadow: #000 1px 0 5px;
+    }
+  }
+}

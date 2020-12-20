@@ -22,6 +22,10 @@
 
       &::after {
         content: '-';
+        display: inline-block;
+        font-weight: bolder;
+        font-size: x-large;
+        padding: 2px;
       }
 
       &.melee {
@@ -52,8 +56,8 @@
 
     > li {
       display: inline-block;
-      height: 8px;
-      width: 7px;
+      height: 6px;
+      width: 8px;
 
       &:nth-child(even) {
         .attack-dice-icon {
