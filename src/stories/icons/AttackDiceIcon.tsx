@@ -2,7 +2,7 @@ import React from 'react';
 import './AttackDiceIcon.scss';
 
 export interface AttackDiceIconProps {
-  color: 'White' | 'Black' | 'Red';
+  color: 'Red' | 'Black' | 'White';
 }
 
 export const AttackDiceIcon: React.FC<AttackDiceIconProps> = (props) => {

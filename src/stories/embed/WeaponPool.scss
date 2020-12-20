@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Aero Matics Display Regular';
+  src: url('../assets/aero-matics-display-regular.woff') format('woff');
+}
+
+.weapon-pool {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 25px;
+
+  > .range {
+    display: inline-block;
+    margin-right: 5px;
+
+    .ranged {
+      color: #417b9c;
+      font-family: 'Aero Matics Display Regular';
+      font-weight: bold;
+      font-size: large;
+      line-height: 10px;
+
+      &::after {
+        content: '-';
+      }
+
+      &.melee {
+        &::after {
+          content: '/';
+        }
+      }
+    }
+
+    .range-icon {
+      background: #ddd;
+      border-radius: 8px;
+      color: #417b9c;
+      font-size: x-large;
+      padding: 2px;
+
+      &[data-range='Melee'] {
+        color: #90181e;
+      }
+    }
+  }
+
+  > .dice {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+      display: inline-block;
+      height: 8px;
+      width: 7px;
+
+      &:nth-child(even) {
+        .attack-dice-icon {
+          position: absolute;
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}
