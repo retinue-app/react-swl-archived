@@ -5,24 +5,26 @@
 
 .weapon {
   > header {
-    background: #515153;
+    background: #555;
     color: #fff;
     font-family: 'Aero Matics Display Regular';
     font-weight: normal;
-    font-size: small;
+    font-size: x-small;
     letter-spacing: 0.5px;
     padding: 3px;
   }
 
   > main {
-    background: #8c8c8c;
+    background: #aaa;
     padding: 5px;
   }
 
   > footer {
+    background-color: #fff;
     font-family: 'Aero Matics Display Regular';
     font-size: small;
-    padding: 5px;
+    height: 15px;
+    line-height: 15px;
 
     > ul {
       margin: 0;

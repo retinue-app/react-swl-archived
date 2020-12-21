@@ -22,6 +22,7 @@
 
   &.reminder {
     font-family: 'Minion Pro Italic';
+    font-size: small;
 
     .keyword {
       font-style: italic;
@@ -30,18 +31,19 @@
 
   &.keyword {
     font-family: 'Aero Matics Display Regular';
+    font-weight: bold;
   }
 }
 
 .keyword-text {
   > .reminder {
-    padding-left: 5px;
+    padding-left: 4px;
 
-    ::before {
+    &::before {
       content: '(';
     }
 
-    ::after {
+    &::after {
       content: ')';
     }
   }

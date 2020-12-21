@@ -40,13 +40,14 @@
   }
 
   > .dice {
-    background: #71747b;
+    background: #999;
     color: #fff;
     display: flex;
     flex: 1;
     justify-content: center;
     align-items: center;
     text-shadow: #000 1px 0 1px;
+    font-size: smaller;
     padding: 5px;
 
     &.red {
