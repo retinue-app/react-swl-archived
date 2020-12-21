@@ -82,7 +82,9 @@ export const UnitCard: React.FC<UnitCardProps> = (props) => {
             const target = e.target as HTMLDivElement;
             target.classList.add('saving');
             if (rootDiv.current) {
-              const result = await html2canvas(rootDiv.current);
+              const result = await html2canvas(rootDiv.current, {
+                backgroundColor: null,
+              });
               const anchor = document.createElement('a');
               anchor.download = `${props.name}.png`;
               anchor.href = result.toDataURL();
