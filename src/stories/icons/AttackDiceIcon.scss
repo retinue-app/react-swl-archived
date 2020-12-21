@@ -2,21 +2,21 @@ span.attack-dice-icon {
   background: #ccc;
   display: inline-block;
   transform: rotateX(15deg) rotateZ(45deg);
-  min-height: 8px;
-  min-width: 8px;
+  min-height: 6px;
+  min-width: 6px;
 
   &[data-color='Red'] {
     background: #90181e;
-    border: 1px solid #aaa;
+    border: 1px solid #ddd;
   }
 
   &[data-color='Black'] {
     background: #000;
-    border: 1px solid #aaa;
+    border: 1px solid #ddd;
   }
 
   &[data-color='White'] {
     background: #fff;
-    border: 1px solid #666;
+    border: 1px solid #333;
   }
 }

@@ -44,3 +44,16 @@ Example3.args = {
     'or lower. This is treated as a move action.',
 };
 Example3.storyName = 'Keyword Action';
+
+export const Example4 = (args: KeywordTextProps) => {
+  return <KeywordText {...args} />;
+};
+
+Example4.args = {
+  name: 'Deflect',
+  reminder:
+    `While defending, if you spend a dodge token, you gain  ` +
+    `"{D_SURGE}: {BLOCK}"; if it's a ranged attack, the attacker suffers 1 ` +
+    `wound for each {D_SURGE} rolled.`,
+};
+Example4.storyName = 'Keyword Passive';

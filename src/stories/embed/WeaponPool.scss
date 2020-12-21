@@ -7,7 +7,7 @@
   display: flex;
   margin: 0;
   padding: 0;
-  height: 25px;
+  height: 22px;
 
   > .range {
     display: inline-block;
@@ -24,7 +24,7 @@
         content: '-';
         display: inline-block;
         font-weight: bolder;
-        font-size: x-large;
+        font-size: normal;
         padding: 2px;
       }
 
@@ -39,7 +39,7 @@
       background: #ddd;
       border-radius: 8px;
       color: #417b9c;
-      font-size: x-large;
+      font-size: normal;
       padding: 2px;
 
       &[data-range='Melee'] {
@@ -59,10 +59,15 @@
       height: 6px;
       width: 8px;
 
+      .attack-dice-icon {
+        position: absolute;
+        margin-top: -6px;
+      }
+
       &:nth-child(even) {
         .attack-dice-icon {
           position: absolute;
-          margin-top: 6px;
+          margin-top: 2px;
         }
       }
     }
