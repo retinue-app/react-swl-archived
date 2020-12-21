@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "./static/css/main.94f11d09.chunk.css",
-    "main.js": "./main.ec0319ea6bcc90b9cd6c.bundle.js",
+    "main.js": "./main.9288f4f96e41ff2ea7d5.bundle.js",
     "main.css.map": "./static/css/main.94f11d09.chunk.css.map",
-    "main.js.map": "./main.ec0319ea6bcc90b9cd6c.bundle.js.map",
-    "runtime~main.js": "./runtime~main.ec0319ea6bcc90b9cd6c.bundle.js",
-    "runtime~main.js.map": "./runtime~main.ec0319ea6bcc90b9cd6c.bundle.js.map",
-    "vendors~main.js": "./vendors~main.ec0319ea6bcc90b9cd6c.bundle.js",
-    "vendors~main.js.map": "./vendors~main.ec0319ea6bcc90b9cd6c.bundle.js.map",
+    "main.js.map": "./main.9288f4f96e41ff2ea7d5.bundle.js.map",
+    "runtime~main.js": "./runtime~main.9288f4f96e41ff2ea7d5.bundle.js",
+    "runtime~main.js.map": "./runtime~main.9288f4f96e41ff2ea7d5.bundle.js.map",
+    "vendors~main.js": "./vendors~main.9288f4f96e41ff2ea7d5.bundle.js",
+    "vendors~main.js.map": "./vendors~main.9288f4f96e41ff2ea7d5.bundle.js.map",
     "iframe.html": "./iframe.html",
     "static/media/UnitCard.scss": "./static/media/minion-pro.e8e768e5.woff",
     "static/media/PointDisplay.scss": "./static/media/aero-matics-regular.129c169f.woff",
     "static/media/RangeIcon.scss": "./static/media/legion-icons-3.0.b0ce1de1.woff2",
     "static/media/CardTextDisplay.scss": "./static/media/minion-pro-italic.c9200037.woff",
-    "vendors~main.ec0319ea6bcc90b9cd6c.bundle.js.LICENSE.txt": "./vendors~main.ec0319ea6bcc90b9cd6c.bundle.js.LICENSE.txt"
+    "vendors~main.9288f4f96e41ff2ea7d5.bundle.js.LICENSE.txt": "./vendors~main.9288f4f96e41ff2ea7d5.bundle.js.LICENSE.txt"
   },
   "entrypoints": [
-    "runtime~main.ec0319ea6bcc90b9cd6c.bundle.js",
-    "vendors~main.ec0319ea6bcc90b9cd6c.bundle.js",
+    "runtime~main.9288f4f96e41ff2ea7d5.bundle.js",
+    "vendors~main.9288f4f96e41ff2ea7d5.bundle.js",
     "static/css/main.94f11d09.chunk.css",
-    "main.ec0319ea6bcc90b9cd6c.bundle.js"
+    "main.9288f4f96e41ff2ea7d5.bundle.js"
   ]
 }
