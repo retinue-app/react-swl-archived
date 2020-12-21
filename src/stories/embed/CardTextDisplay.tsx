@@ -55,7 +55,7 @@ export const SymbolRenderer: React.FC<SymbolRendererProps> = (props) => {
           {supportedSymbols[string] || <code>{string}</code>}{' '}
         </span>,
       );
-      i = match + 1;
+      i = match;
     } else if (char === '*') {
       clearBuffer();
       i++;
@@ -66,7 +66,7 @@ export const SymbolRenderer: React.FC<SymbolRendererProps> = (props) => {
           <SymbolRenderer text={string} variant="keyword" />
         </strong>,
       );
-      i = match + 1;
+      i = match;
     } else {
       buffer = `${buffer}${char}`;
     }
