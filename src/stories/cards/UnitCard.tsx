@@ -1,5 +1,6 @@
 import { UnitRank } from '@retinue/databank';
-import React from 'react';
+import html2canvas from 'html2canvas';
+import React, { useRef } from 'react';
 import { KeywordText, KeywordTextProps } from '../embed/CardTextDisplay';
 import { DefenseStats } from '../embed/DefenseStats';
 import { PointDisplay } from '../embed/PointDisplay';
@@ -56,8 +57,9 @@ export const UnitCard: React.FC<UnitCardProps> = (props) => {
       image = 'logos/separatist.svg';
       break;
   }
+  const rootDiv = useRef<HTMLDivElement>(null);
   return (
-    <div className="unit-card">
+    <div className="unit-card" ref={rootDiv}>
       <div
         className="faction-points-upgrades"
         style={{
@@ -73,6 +75,24 @@ export const UnitCard: React.FC<UnitCardProps> = (props) => {
         />
         <PointDisplay points={props.points} />
         <UpgradeBar {...props.upgrades} />
+        <div
+          className="menu"
+          role="button"
+          onClick={async (e) => {
+            const target = e.target as HTMLDivElement;
+            target.classList.add('saving');
+            if (rootDiv.current) {
+              const result = await html2canvas(rootDiv.current, {
+                backgroundColor: null,
+              });
+              const anchor = document.createElement('a');
+              anchor.download = `${props.name}.png`;
+              anchor.href = result.toDataURL();
+              anchor.click();
+              target.classList.remove('saving');
+            }
+          }}
+        />
       </div>
       <div className="rest-of-unit">
         <div className="unit-stats-description">

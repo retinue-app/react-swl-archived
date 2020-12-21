@@ -12,6 +12,8 @@ Example1.args = (() => {
   const args: WeaponProps = {
     name: "Vader's Lightsaber",
     red: 6,
+    black: 0,
+    white: 0,
     melee: true,
     keywords: ['Impact 3', 'Pierce 3'],
   };
