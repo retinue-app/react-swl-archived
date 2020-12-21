@@ -24,10 +24,12 @@ $hiddenColor: #76777b;
     }
 
     > span {
+      display: flex;
       flex: 1;
       font-size: larger;
       padding: 5px;
-      text-align: center;
+      justify-content: center;
+      align-items: center;
       text-shadow: #000 1px 0 5px;
     }
   }

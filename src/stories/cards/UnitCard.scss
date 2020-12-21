@@ -33,11 +33,11 @@
     border-radius: 10px 0px 0px 10px;
     display: flex;
     flex-direction: column;
-    padding-bottom: 15px;
+    padding-bottom: 16px;
     width: 40px;
 
     > .faction-icon {
-      height: 40px;
+      height: 39px;
       width: 40px;
       background-repeat: no-repeat;
       background-position: center center;
@@ -53,6 +53,7 @@
     display: flex;
     flex-direction: column;
     flex: auto;
+    align-content: space-between;
 
     > .unit-stats-description {
       display: flex;
@@ -81,9 +82,12 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            text-align: center;
+            line-height: 15px;
 
             > .name {
-              font-size: larger;
+              font-size: large;
+              max-width: 80%;
 
               &.unique {
                 &::before {
@@ -127,10 +131,13 @@
 
         > article {
           padding: 4px;
-          font-size: 15px;
+          font-size: 13px;
+          max-height: 175px;
+          overflow-y: hidden;
+          display: block;
 
           .keyword-text {
-            margin-bottom: 5px;
+            margin-bottom: 2px;
 
             &:last-child {
               margin-bottom: 0px;
@@ -165,13 +172,14 @@
 
         > .surge-table-wrapper {
           display: flex;
-          height: 58px;
+          height: 67px;
+          font-size: small;
 
           > .surge-table {
             flex: auto;
 
             > div {
-              height: 24px;
+              height: 33px;
             }
           }
         }
@@ -179,6 +187,7 @@
     }
 
     > .weapons {
+      flex: 1;
       height: 68px;
 
       > .weapon-bar li:last-child footer {
