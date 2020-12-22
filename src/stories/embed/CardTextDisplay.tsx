@@ -43,36 +43,39 @@ export const SymbolRenderer: React.FC<SymbolRendererProps> = (props) => {
     buffer = '';
   }
 
-  for (let i = 0; i < props.text.length; i++) {
-    const char = props.text[i];
-    if (char === '{') {
-      clearBuffer();
-      i++;
-      const match = props.text.indexOf('}', i + 1);
-      const string = props.text.substring(i, match);
-      output.push(
-        <span key={key++}>
-          {supportedSymbols[string] || <code>{string}</code>}{' '}
-        </span>,
-      );
-      i = match;
-    } else if (char === '*') {
-      clearBuffer();
-      i++;
-      const match = props.text.indexOf('*', i + 1);
-      const string = props.text.substring(i, match);
-      output.push(
-        <strong key={key++}>
-          <SymbolRenderer text={string} variant="keyword" />
-        </strong>,
-      );
-      i = match;
-    } else {
-      buffer = `${buffer}${char}`;
+  // Prevents a crash if text was omitted.
+  if (props.text) {
+    for (let i = 0; i < props.text.length; i++) {
+      const char = props.text[i];
+      if (char === '{') {
+        clearBuffer();
+        i++;
+        const match = props.text.indexOf('}', i + 1);
+        const string = props.text.substring(i, match);
+        output.push(
+          <span key={key++}>
+            {supportedSymbols[string] || <code>{string}</code>}{' '}
+          </span>,
+        );
+        i = match;
+      } else if (char === '*') {
+        clearBuffer();
+        i++;
+        const match = props.text.indexOf('*', i + 1);
+        const string = props.text.substring(i, match);
+        output.push(
+          <strong key={key++}>
+            <SymbolRenderer text={string} variant="keyword" />
+          </strong>,
+        );
+        i = match;
+      } else {
+        buffer = `${buffer}${char}`;
+      }
     }
-  }
 
-  clearBuffer();
+    clearBuffer();
+  }
 
   return (
     <span className={`symbolized-text ${props.variant || ''}`}>{output}</span>

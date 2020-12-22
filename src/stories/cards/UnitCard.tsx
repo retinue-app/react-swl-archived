@@ -146,9 +146,14 @@ export const UnitCard: React.FC<UnitCardProps> = (props) => {
         </div>
         <div className="weapons">
           <WeaponBar
-            children={props.weapons.map((v, i) => {
-              return <Weapon {...v} key={i} />;
-            })}
+            children={
+              // Prevents crashes if an invalid object was passed.
+              props.weapons && props.weapons.map instanceof Function
+                ? props.weapons.map((v, i) => {
+                    return <Weapon {...v} key={i} />;
+                  })
+                : []
+            }
           />
         </div>
       </div>
