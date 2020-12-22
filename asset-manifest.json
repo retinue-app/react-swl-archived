@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "./static/css/main.7a2deafc.chunk.css",
-    "main.js": "./main.1257651093ccd7327826.bundle.js",
-    "main.css.map": "./static/css/main.7a2deafc.chunk.css.map",
-    "main.js.map": "./main.1257651093ccd7327826.bundle.js.map",
-    "runtime~main.js": "./runtime~main.1257651093ccd7327826.bundle.js",
-    "runtime~main.js.map": "./runtime~main.1257651093ccd7327826.bundle.js.map",
-    "vendors~main.js": "./vendors~main.1257651093ccd7327826.bundle.js",
-    "vendors~main.js.map": "./vendors~main.1257651093ccd7327826.bundle.js.map",
+    "main.css": "./static/css/main.ce03dbb6.chunk.css",
+    "main.js": "./main.e2609af347125451547a.bundle.js",
+    "main.css.map": "./static/css/main.ce03dbb6.chunk.css.map",
+    "main.js.map": "./main.e2609af347125451547a.bundle.js.map",
+    "runtime~main.js": "./runtime~main.e2609af347125451547a.bundle.js",
+    "runtime~main.js.map": "./runtime~main.e2609af347125451547a.bundle.js.map",
+    "vendors~main.js": "./vendors~main.e2609af347125451547a.bundle.js",
+    "vendors~main.js.map": "./vendors~main.e2609af347125451547a.bundle.js.map",
     "iframe.html": "./iframe.html",
     "static/media/UnitCard.scss": "./static/media/minion-pro.e8e768e5.woff",
     "static/media/PointDisplay.scss": "./static/media/aero-matics-regular.129c169f.woff",
     "static/media/DefenseStats.scss": "./static/media/legion-icons-3.0.b0ce1de1.woff2",
     "static/media/CardTextDisplay.scss": "./static/media/minion-pro-italic.c9200037.woff",
-    "vendors~main.1257651093ccd7327826.bundle.js.LICENSE.txt": "./vendors~main.1257651093ccd7327826.bundle.js.LICENSE.txt"
+    "vendors~main.e2609af347125451547a.bundle.js.LICENSE.txt": "./vendors~main.e2609af347125451547a.bundle.js.LICENSE.txt"
   },
   "entrypoints": [
-    "runtime~main.1257651093ccd7327826.bundle.js",
-    "vendors~main.1257651093ccd7327826.bundle.js",
-    "static/css/main.7a2deafc.chunk.css",
-    "main.1257651093ccd7327826.bundle.js"
+    "runtime~main.e2609af347125451547a.bundle.js",
+    "vendors~main.e2609af347125451547a.bundle.js",
+    "static/css/main.ce03dbb6.chunk.css",
+    "main.e2609af347125451547a.bundle.js"
   ]
 }
