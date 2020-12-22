@@ -21,6 +21,10 @@ const supportedSymbols: { [name: string]: JSX.Element | undefined } = {
   SUPPORT: <RankIcon rank="Support" />,
   HEAVY: <RankIcon rank="Heavy" />,
 
+  // MISC.
+  ACTION: <KeywordIcon icon="Action" />,
+  FREE: <KeywordIcon icon="Free Action" />,
+
   // Upgrades.
   FORCE: <UpgradeIcon type="Force" />,
 };
@@ -51,6 +55,9 @@ export const SymbolRenderer: React.FC<SymbolRendererProps> = (props) => {
         clearBuffer();
         i++;
         const match = props.text.indexOf('}', i + 1);
+        if (match === -1) {
+          break;
+        }
         const string = props.text.substring(i, match);
         output.push(
           <span key={key++}>
@@ -62,6 +69,9 @@ export const SymbolRenderer: React.FC<SymbolRendererProps> = (props) => {
         clearBuffer();
         i++;
         const match = props.text.indexOf('*', i + 1);
+        if (match === -1) {
+          break;
+        }
         const string = props.text.substring(i, match);
         output.push(
           <strong key={key++}>
@@ -69,6 +79,23 @@ export const SymbolRenderer: React.FC<SymbolRendererProps> = (props) => {
           </strong>,
         );
         i = match;
+      } else if (char === '_') {
+        clearBuffer();
+        i++;
+        const match = props.text.indexOf('_', i + 1);
+        if (match === -1) {
+          break;
+        }
+        const string = props.text.substring(i, match);
+        output.push(
+          <span key={key++}>
+            <SymbolRenderer text={string} variant="reminder" />
+          </span>,
+        );
+        i = match;
+      } else if (char === '\n') {
+        clearBuffer();
+        output.push(<br key={key++} />);
       } else {
         buffer = `${buffer}${char}`;
       }

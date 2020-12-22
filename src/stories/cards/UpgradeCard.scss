@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'Aero Matics Display Regular';
+  src: url('../assets/aero-matics-display-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Legion Icons';
+  src: url('../assets/legion-icons-3.0.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Minion Pro';
+  src: url('../assets/minion-pro.woff') format('woff');
+}
+
+.upgrade-card {
+  font-family: 'Minion Pro';
+  border: 1px solid #333;
+
+  width: 270px;
+  height: 418px;
+  background: #888;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  > header {
+    background: radial-gradient(circle, #eee 0%, #ddd 70%, #ccc 100%);
+    border: 1px solid #999;
+    height: 30px;
+    margin: 2px 5px;
+    padding: 0px 5px;
+    font-family: 'Aero Matics Display Regular';
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    height: 30px;
+  }
+
+  > .art {
+    height: 115px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 5px 5px;
+    background-color: #222;
+    display: flex;
+    flex-direction: column-reverse;
+    cursor: pointer;
+
+    > .details {
+      display: flex;
+      margin: 2px;
+
+      > .weapon {
+        background: #01361b;
+        border: 1px solid #c89738;
+        height: 20px;
+        flex: 1;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2px;
+      }
+
+      > .usage {
+        height: 30px;
+        width: 30px;
+        font-size: x-large;
+        background: #01361b;
+        border: 1px solid #c89738;
+        color: #d3e7d0;
+        text-align: center;
+        margin: 2px;
+
+        &.exhaust {
+          font-family: 'Legion Icons';
+          &::before {
+            content: 'z';
+          }
+        }
+
+        &.discard {
+          &::before {
+            content: 'X';
+          }
+        }
+      }
+    }
+  }
+
+  > main {
+    flex: auto;
+    background: #f0f0f0;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    font-size: smaller;
+  }
+
+  > footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -25px;
+    padding: 2px;
+
+    > div {
+      height: 30px;
+
+      &.type {
+        background: #000;
+        color: #fff;
+        border: 1px solid #999;
+        border-radius: 15px;
+        width: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: xx-large;
+        cursor: pointer;
+      }
+
+      &.points {
+        background: #dfeff0;
+        border: 1px solid #307776;
+        border-radius: 15px;
+        width: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: large;
+      }
+    }
+  }
+}
