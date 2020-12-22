@@ -24,11 +24,9 @@ export const CommandCard: React.FC<CommandCardProps> = (props) => {
         <div
           className="pip-wrapper"
           role="button"
-          onClick={async (e) => {
-            const target = e.target as HTMLUListElement;
-            const wrapper = target.parentNode as HTMLDivElement;
-            wrapper.classList.add('saving');
+          onClick={async () => {
             if (rootDiv.current) {
+              rootDiv.current.classList.add('html2canvas');
               const result = await html2canvas(rootDiv.current, {
                 backgroundColor: null,
               });
@@ -36,7 +34,7 @@ export const CommandCard: React.FC<CommandCardProps> = (props) => {
               anchor.download = `${props.title}.png`;
               anchor.href = result.toDataURL();
               anchor.click();
-              wrapper.classList.remove('saving');
+              rootDiv.current.classList.remove('html2canvas');
             }
           }}
         >

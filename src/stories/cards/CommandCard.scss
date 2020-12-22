@@ -13,6 +13,37 @@
   src: url('../assets/minion-pro.woff') format('woff');
 }
 
+.command-card:not(.html2canvas) {
+  .pip-wrapper {
+    &:not(.saving):hover {
+      &:hover {
+        > .pip-display {
+          &::before {
+            content: 'Save';
+            cursor: pointer;
+            font-size: smaller;
+            color: #fff;
+          }
+
+          li {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.command-card.html2canvas {
+  .title {
+    line-height: 20px;
+  }
+
+  .orders {
+    line-height: 15px;
+  }
+}
+
 .command-card {
   font-family: 'Minion Pro';
   border: 1px solid #555;
@@ -33,25 +64,6 @@
     display: flex;
     align-items: center;
     padding: 5px;
-
-    .pip-wrapper {
-      &:not(.saving):hover {
-        &:hover {
-          > .pip-display {
-            &::before {
-              content: 'Save';
-              cursor: pointer;
-              font-size: smaller;
-              color: #fff;
-            }
-
-            li {
-              display: none;
-            }
-          }
-        }
-      }
-    }
 
     > .title {
       background: radial-gradient(circle, #eee 0%, #ddd 70%, #ccc 100%);
