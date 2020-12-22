@@ -63,7 +63,9 @@ export const UpgradeCard: React.FC<UpgradeCardProps> = (props) => {
       </div>
       <main>
         {props.restriction && (
-          <SymbolRenderer text={props.restriction} variant="reminder" />
+          <p>
+            <SymbolRenderer text={props.restriction} variant="reminder" />
+          </p>
         )}
         <SymbolRenderer text={props.text} />
       </main>

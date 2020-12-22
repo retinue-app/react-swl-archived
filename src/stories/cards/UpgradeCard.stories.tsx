@@ -58,9 +58,9 @@ DLT19Stormtrooper.args = (() => {
       black: 0,
       white: 0,
     },
+    restriction: 'Stormtroopers Only',
     text:
-      '_STORMTROOPERS ONLY._\n\n' +
-      'AAdd 1 DLT-19 stormtrooper mini.\n' +
+      'Add 1 DLT-19 stormtrooper mini.\n\n' +
       '*IMPACT 1* _(While attacking a unit that has *ARMOR*, change up to ' +
       '1 {HIT} result to a {CRIT} result.)_',
   };
@@ -77,8 +77,8 @@ SeizeTheInitiative.args = (() => {
     usage: 'Discard',
     type: 'Training',
     image: 'demo/up-seize.png',
+    restriction: '{COMMANDER} or {OPERATIVE} only.',
     text:
-      '_{COMMANDER} or {OPERATIVE} ONLY._\n\n' +
       'During the Issue Orders Step or the Command Phase, ' +
       'issue an order to yourself.',
   };
@@ -96,8 +96,13 @@ TristanWren.args = (() => {
     wounds: 2,
     type: 'Heavy Weapon',
     image: 'demo/up-tristan.png',
+    weapon: {
+      black: 2,
+      minRange: 1,
+      maxRange: 3,
+    },
+    restriction: 'Mandalorian Resistance Only.',
     text:
-      '_MANDALORIAN RESISTANCE ONLY._\n\n' +
       'Add 1 Tristan Wren mini.\n\n' +
       '*Lethal 1* _(While attacking, spend up to 1 aim token to gain *Pierce 1*.)_\n\n' +
       '*Suppressive* _(After you perform an attack, the defender gains 1 suppression token.)_',
