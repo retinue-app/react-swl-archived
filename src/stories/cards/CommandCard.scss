@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'Aero Matics Display Regular';
+  src: url('../assets/aero-matics-display-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Aero Matics Light';
+  src: url('../assets/aero-matics-light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Minion Pro';
+  src: url('../assets/minion-pro.woff') format('woff');
+}
+
+.command-card {
+  font-family: 'Minion Pro';
+  border: 1px solid #555;
+
+  width: 300px;
+  height: 418px;
+  background: #333;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  > header {
+    background-color: #888;
+    border-radius: 10px 10px 0px 0px;
+    flex: 1;
+    max-height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+
+    .pip-wrapper {
+      &:not(.saving):hover {
+        &:hover {
+          > .pip-display {
+            &::before {
+              content: 'Save';
+              cursor: pointer;
+              font-size: smaller;
+              color: #fff;
+            }
+
+            li {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    > .title {
+      background: radial-gradient(circle, #eee 0%, #ddd 70%, #ccc 100%);
+      border: 1px solid #999;
+      height: 30px;
+      margin: 2px 5px;
+      padding: 0px 5px;
+      font-family: 'Aero Matics Display Regular';
+      font-weight: bold;
+      line-height: 30px;
+      text-align: center;
+      flex: auto;
+    }
+  }
+
+  > .art {
+    flex: 1;
+    background-color: #111;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: row-reverse;
+
+    &.small {
+      min-height: 260px;
+    }
+
+    > .unit-specifier {
+      font-family: 'Aero Matics Light';
+      text-transform: uppercase;
+      background: #ddd;
+      display: inline-block;
+      padding: 2px 10px;
+      font-size: x-small;
+      line-height: 15px;
+      font-weight: bold;
+      max-width: 30%;
+      height: 15px;
+      margin: 0px 10px;
+      margin-top: -10px;
+      border: 1px solid #999;
+    }
+  }
+
+  > main {
+    flex: 1;
+    max-height: 190px;
+    background-color: #333;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px 5px;
+
+    > .orders {
+      background: radial-gradient(circle, #eee 0%, #ddd 70%, #ccc 100%);
+      border: 1px solid #999;
+      border-radius: 8px;
+      height: 20px;
+      padding: 0px 5px;
+      font-family: 'Aero Matics Display Regular';
+      font-size: smaller;
+      font-weight: bold;
+      line-height: 20px;
+      text-align: center;
+      width: 70%;
+    }
+
+    > .text {
+      flex: auto;
+      background-color: #f0f0f0;
+      border: 1px solid #999;
+      font-size: smaller;
+      border-radius: 8px;
+      width: 95%;
+      margin: 5px 10px;
+      padding: 5px;
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  > footer {
+    height: 40px;
+    margin: 5px;
+    width: 70%;
+    margin: 0px auto 5px auto;
+    border: 1px solid #111;
+
+    .weapon header {
+      display: none;
+    }
+  }
+}
