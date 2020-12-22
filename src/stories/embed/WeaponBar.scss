@@ -3,6 +3,13 @@
   src: url('../assets/aero-matics-display-regular.woff') format('woff');
 }
 
+.html2canvas {
+  .weapon > header {
+    line-height: 7px;
+    padding: 3px 3px 6px 3px;
+  }
+}
+
 .weapon {
   > header {
     background: #555;

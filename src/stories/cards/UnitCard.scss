@@ -18,6 +18,21 @@
   src: url('../assets/minion-pro.woff') format('woff');
 }
 
+.unit-card:not(.html2canvas) {
+  .menu {
+    &:hover {
+      background-color: #333;
+      border-radius: 0px 0px 0px 10px;
+
+      &::before {
+        content: 'Save';
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 .unit-card {
   font-family: 'Minion Pro';
   border: 1px solid #555;
@@ -42,19 +57,6 @@
       font-weight: bold;
       text-align: center;
       line-height: 16px;
-
-      &:not(.saving) {
-        &:hover {
-          background-color: #333;
-          border-radius: 0px 0px 0px 10px;
-
-          &::before {
-            content: 'Save';
-            color: #fff;
-            cursor: pointer;
-          }
-        }
-      }
     }
 
     > .faction-icon {
@@ -143,7 +145,7 @@
               background-color: #333;
               height: 15px;
               text-align: center;
-              font-family: 'Aero Matics Display Regular';
+              line-height: 15px;
               font-size: small;
             }
           }
