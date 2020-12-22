@@ -68,6 +68,8 @@
         height: 30px;
         width: 30px;
         font-size: x-large;
+        font-family: 'Aero Matics Display Regular';
+        font-weight: bold;
         background: #01361b;
         border: 1px solid #c89738;
         color: #d3e7d0;
@@ -86,6 +88,19 @@
             content: 'X';
           }
         }
+      }
+
+      > .wounds {
+        height: 30px;
+        width: 30px;
+        font-size: x-large;
+        font-weight: bold;
+        font-family: 'Aero Matics Display Regular';
+        background: #01361b;
+        border: 1px solid #c89738;
+        color: #5cb44e;
+        text-align: center;
+        margin: 2px;
       }
     }
   }

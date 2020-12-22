@@ -84,3 +84,23 @@ SeizeTheInitiative.args = (() => {
   };
   return args;
 })();
+
+export const TristanWren = (args: UpgradeCardProps) => (
+  <UpgradeCard {...args} />
+);
+TristanWren.args = (() => {
+  const args: UpgradeCardProps = {
+    name: 'Tristan Wren',
+    unique: true,
+    points: 38,
+    wounds: 2,
+    type: 'Heavy Weapon',
+    image: 'demo/up-tristan.png',
+    text:
+      '_MANDALORIAN RESISTANCE ONLY._\n\n' +
+      'Add 1 Tristan Wren mini.\n\n' +
+      '*Lethal 1* _(While attacking, spend up to 1 aim token to gain *Pierce 1*.)_\n\n' +
+      '*Suppressive* _(After you perform an attack, the defender gains 1 suppression token.)_',
+  };
+  return args;
+})();

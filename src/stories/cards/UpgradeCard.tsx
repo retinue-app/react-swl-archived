@@ -12,6 +12,7 @@ export interface UpgradeCardProps {
   weapon?: WeaponPoolProps;
   usage?: 'Exhaust' | 'Discard';
   image?: string;
+  wounds?: number;
   points: number;
   type: UpgradeType;
   restriction?: string;
@@ -57,6 +58,7 @@ export const UpgradeCard: React.FC<UpgradeCardProps> = (props) => {
           {props.usage && (
             <div className={`usage ${props.usage.toLowerCase()}`} />
           )}
+          {props.wounds && <div className="wounds">{props.wounds}</div>}
         </div>
       </div>
       <main>
