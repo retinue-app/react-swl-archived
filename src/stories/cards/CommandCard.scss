@@ -86,6 +86,7 @@
     background-position: center center;
     display: flex;
     flex-direction: row-reverse;
+    cursor: pointer;
 
     &.small {
       min-height: 260px;

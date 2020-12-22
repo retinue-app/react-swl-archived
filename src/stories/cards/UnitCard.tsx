@@ -127,6 +127,23 @@ export const UnitCard: React.FC<UnitCardProps> = (props) => {
               style={{
                 backgroundImage: props.image ? `url(${props.image})` : '',
               }}
+              onClick={(t) => {
+                const target = t.target as HTMLDivElement;
+                const upload = document.createElement('input');
+                upload.type = 'file';
+                upload.addEventListener('change', () => {
+                  const file = upload.files?.[0];
+                  if (!file) {
+                    return;
+                  }
+                  const reader = new FileReader();
+                  reader.addEventListener('load', () => {
+                    target.style.backgroundImage = `url(${reader.result})`;
+                  });
+                  reader.readAsDataURL(file);
+                });
+                upload.click();
+              }}
             />
             <div className="type">{props.type}</div>
             <DefenseStats
