@@ -46,7 +46,7 @@ export const StandingOrders = (args: CommandCardProps) => (
   <CommandCard {...args} />
 );
 StandingOrders.args = {
-  pips: 1,
+  pips: 4,
   title: 'Standing Orders',
   size: 'small',
   image: 'demo/cc-standing-orders.png',
