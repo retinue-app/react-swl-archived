@@ -79,9 +79,8 @@ export const UnitCard: React.FC<UnitCardProps> = (props) => {
           className="menu"
           role="button"
           onClick={async (e) => {
-            const target = e.target as HTMLDivElement;
-            target.classList.add('saving');
             if (rootDiv.current) {
+              rootDiv.current.classList.add('html2canvas');
               const result = await html2canvas(rootDiv.current, {
                 backgroundColor: null,
               });
@@ -89,7 +88,7 @@ export const UnitCard: React.FC<UnitCardProps> = (props) => {
               anchor.download = `${props.name}.png`;
               anchor.href = result.toDataURL();
               anchor.click();
-              target.classList.remove('saving');
+              rootDiv.current.classList.remove('html2canvas');
             }
           }}
         />

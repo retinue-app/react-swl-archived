@@ -59,9 +59,11 @@
       height: 6px;
       width: 8px;
 
-      .attack-dice-icon {
-        position: absolute;
-        margin-top: -6px;
+      &:not(:only-child) {
+        .attack-dice-icon {
+          position: absolute;
+          margin-top: -6px;
+        }
       }
 
       &:nth-child(even) {
