@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "./static/css/main.e24a7043.chunk.css",
-    "main.js": "./main.ba3eb5ea35ac55e0eb0f.bundle.js",
-    "main.css.map": "./static/css/main.e24a7043.chunk.css.map",
-    "main.js.map": "./main.ba3eb5ea35ac55e0eb0f.bundle.js.map",
-    "runtime~main.js": "./runtime~main.ba3eb5ea35ac55e0eb0f.bundle.js",
-    "runtime~main.js.map": "./runtime~main.ba3eb5ea35ac55e0eb0f.bundle.js.map",
-    "vendors~main.js": "./vendors~main.ba3eb5ea35ac55e0eb0f.bundle.js",
-    "vendors~main.js.map": "./vendors~main.ba3eb5ea35ac55e0eb0f.bundle.js.map",
+    "main.css": "./static/css/main.6c92579b.chunk.css",
+    "main.js": "./main.262aa68a7db1f70cb7fd.bundle.js",
+    "main.css.map": "./static/css/main.6c92579b.chunk.css.map",
+    "main.js.map": "./main.262aa68a7db1f70cb7fd.bundle.js.map",
+    "runtime~main.js": "./runtime~main.262aa68a7db1f70cb7fd.bundle.js",
+    "runtime~main.js.map": "./runtime~main.262aa68a7db1f70cb7fd.bundle.js.map",
+    "vendors~main.js": "./vendors~main.262aa68a7db1f70cb7fd.bundle.js",
+    "vendors~main.js.map": "./vendors~main.262aa68a7db1f70cb7fd.bundle.js.map",
     "iframe.html": "./iframe.html",
     "static/media/UpgradeCard.scss": "./static/media/minion-pro.e8e768e5.woff",
     "static/media/UnitCard.scss": "./static/media/aero-matics-light.4d4c7505.woff",
     "static/media/PointDisplay.scss": "./static/media/aero-matics-regular.129c169f.woff",
     "static/media/CardTextDisplay.scss": "./static/media/minion-pro-italic.c9200037.woff",
-    "vendors~main.ba3eb5ea35ac55e0eb0f.bundle.js.LICENSE.txt": "./vendors~main.ba3eb5ea35ac55e0eb0f.bundle.js.LICENSE.txt"
+    "vendors~main.262aa68a7db1f70cb7fd.bundle.js.LICENSE.txt": "./vendors~main.262aa68a7db1f70cb7fd.bundle.js.LICENSE.txt"
   },
   "entrypoints": [
-    "runtime~main.ba3eb5ea35ac55e0eb0f.bundle.js",
-    "vendors~main.ba3eb5ea35ac55e0eb0f.bundle.js",
-    "static/css/main.e24a7043.chunk.css",
-    "main.ba3eb5ea35ac55e0eb0f.bundle.js"
+    "runtime~main.262aa68a7db1f70cb7fd.bundle.js",
+    "vendors~main.262aa68a7db1f70cb7fd.bundle.js",
+    "static/css/main.6c92579b.chunk.css",
+    "main.262aa68a7db1f70cb7fd.bundle.js"
   ]
 }
